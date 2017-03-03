@@ -30,7 +30,7 @@ public class MyHashTable<K, V> {
         }
     }
 
-    public void put(K key, V value) {
+    public synchronized void put(K key, V value) {
         if (key == null) {
             throw new NullPointerException("Key cannot be null!");
         }
@@ -54,7 +54,7 @@ public class MyHashTable<K, V> {
 
     }
 
-    public V get(K key) {
+    public synchronized V get(K key) {
         if (key == null) {
             throw new NullPointerException("key cannot be null!");
         }
